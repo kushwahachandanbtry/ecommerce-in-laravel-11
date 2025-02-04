@@ -65,6 +65,33 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-## Credential
+## Features
+# User Features
+* User Registration & Login
+    Secure user authentication with registration, login, and password reset functionality.
+* Product Catalog
+    Browse products by category, price, or brand. Product details page with images, descriptions, and prices.
+* Search Functionality
+    Search products by product name and filters.
+* Shopping Cart
+    Add, remove, and update product quantities in the cart. View cart summary with total price.
+* Checkout Process
+    There is only cash on delivery method are available.
+* Order History
+    View past orders and track order status (e.g., pending, canceled, delivered).
+* Wishlist
+    Save favorite products for future purchase and also move from wishlist to cart.
+
+# Admin Features
+* Product Management
+    Add, edit, or delete products. Manage product categories and brands.
+* Order Management
+    View and update order statuses (e.g., processing, completed, canceled). View customer details and order history.
+* Inventory Management
+    Track product stock levels and show low-stock and high-stock on bar diagram.
+* Discounts & Coupons
+    Create and manage discount codes and promotional offers.
+
+## Product Catalog
 * Admin's username :- chandan@gmail.com
 * Admin's Pass :- chandan@123
