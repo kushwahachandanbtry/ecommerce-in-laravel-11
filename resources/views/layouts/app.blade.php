@@ -595,13 +595,13 @@
                 <div class="footer-column footer-menu mb-4 mb-lg-0">
                     <h6 class="sub-menu__title text-uppercase">Company</h6>
                     <ul class="sub-menu__list list-unstyled">
-                        <li class="sub-menu__item"><a href="about-2.html" class="menu-link menu-link_us-s">About Us</a>
+                        <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">About Us</a>
                         </li>
                         <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Careers</a></li>
                         <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Affiliates</a></li>
-                        <li class="sub-menu__item"><a href="blog_list1.html" class="menu-link menu-link_us-s">Blog</a>
+                        <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Blog</a>
                         </li>
-                        <li class="sub-menu__item"><a href="contact-2.html" class="menu-link menu-link_us-s">Contact
+                        <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Contact
                                 Us</a></li>
                     </ul>
                 </div>
@@ -609,13 +609,13 @@
                 <div class="footer-column footer-menu mb-4 mb-lg-0">
                     <h6 class="sub-menu__title text-uppercase">Shop</h6>
                     <ul class="sub-menu__list list-unstyled">
-                        <li class="sub-menu__item"><a href="shop2.html" class="menu-link menu-link_us-s">New
+                        <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">New
                                 Arrivals</a></li>
-                        <li class="sub-menu__item"><a href="shop3.html" class="menu-link menu-link_us-s">Accessories</a>
+                        <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Accessories</a>
                         </li>
-                        <li class="sub-menu__item"><a href="shop4.html" class="menu-link menu-link_us-s">Men</a></li>
-                        <li class="sub-menu__item"><a href="shop5.html" class="menu-link menu-link_us-s">Women</a></li>
-                        <li class="sub-menu__item"><a href="shop1.html" class="menu-link menu-link_us-s">Shop All</a>
+                        <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Men</a></li>
+                        <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Women</a></li>
+                        <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Shop All</a>
                         </li>
                     </ul>
                 </div>
@@ -625,10 +625,10 @@
                     <ul class="sub-menu__list list-unstyled">
                         <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Customer Service</a>
                         </li>
-                        <li class="sub-menu__item"><a href="account_dashboard.html" class="menu-link menu-link_us-s">My
+                        <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">My
                                 Account</a>
                         </li>
-                        <li class="sub-menu__item"><a href="store_location.html" class="menu-link menu-link_us-s">Find a
+                        <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Find a
                                 Store</a>
                         </li>
                         <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Legal & Privacy</a></li>
@@ -675,7 +675,7 @@
             </div>
 
             <div class="col-4">
-                <a href="{{ route('home.index') }}" class="footer-mobile__link d-flex flex-column align-items-center">
+                <a href="{{ route('shop.index') }}" class="footer-mobile__link d-flex flex-column align-items-center">
                     <svg class="d-block" width="18" height="18" viewBox="0 0 18 18" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <use href="#icon_hanger" />
@@ -685,13 +685,17 @@
             </div>
 
             <div class="col-4">
-                <a href="{{ route('home.index') }}" class="footer-mobile__link d-flex flex-column align-items-center">
+                <a href="{{ route('wishlist.index') }}" class="footer-mobile__link d-flex flex-column align-items-center">
                     <div class="position-relative">
                         <svg class="d-block" width="18" height="18" viewBox="0 0 20 20" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <use href="#icon_heart" />
                         </svg>
-                        <span class="wishlist-amount d-block position-absolute js-wishlist-count">3</span>
+                        @if (Cart::instance('wishlist')->content()->count() > 0 )
+                            <span class="cart-amount d-block position-absolute js-cart-items-count">{{Cart::instance('wishlist')->content()->count()}}</span>
+                        
+                        
+                        @endif
                     </div>
                     <span>Wishlist</span>
                 </a>
