@@ -81,6 +81,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 * Inventory Management : Track product stock levels and show low-stock and high-stock on bar diagram.
 * Discounts & Coupons : Create and manage discount codes and promotional offers.
 
-## Product Catalog
+## Access credential
 * Admin's username :- chandan@gmail.com
 * Admin's Pass :- chandan@123
